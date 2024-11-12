@@ -1,16 +1,18 @@
 <?php
 // Include the database connection file
-require_once("dbConnection.php");
+require_once('dbConnection.php');
 
 // Fetch data in descending order (lastest entry first)
-$result = mysqli_query($mysqli, "SELECT * FROM users ORDERBY id DESC");
+$result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC")
 ?>
 
 <html>
-<head>
-    <title>Homepage</title>
-</head>
-
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Homepage</title>
+    </head>
 <body>
     <h2>Homepage</h2>
     <p>
