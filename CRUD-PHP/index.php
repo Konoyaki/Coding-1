@@ -23,4 +23,18 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDERBY id DESC");
             <td><strong>Email</strong></td>
             <td><strong>Action</strong></td>
         </tr>
-        
+        <?php
+        // Fetch the next row of a result set as an associative array
+        while ($res = mysqli_fetch_array($result)) {
+            echo "<tr>";
+            echo "<td>".$res['name']."</td>";
+            echo "<td>".$res['age']."</td>";
+            echo "<td>".$res['email']."</td>";
+            echo "<td><a href=\"edit.php?id=$res[id]\">Edit</a>
+            <a href=\"delete.php?id=$res[id]\" onClick=\"
+            return confirm('Are you sure you want to delete?')\">Delete</a></td>";
+        }
+        ?>
+    </table>
+</body>
+</html>
