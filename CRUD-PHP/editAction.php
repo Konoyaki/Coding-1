@@ -22,10 +22,13 @@ if (isset($_POST['update'])) {
         if (empty($email)) {
             echo "<font color='red'>Email field is empty.</font><br/>";
         }
+        
+        // Show link to the previous page
+        echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
     } else {    
         // Update the database table
         $result = mysqli_query($mysqli, "UPDATE users SET `name` = '$name', `age` = '$age', `email` = '$email' WHERE `id` = $id");
-        
+
         // Display success message
         echo "<p><font color='green'>Data updated successfully!</p>";
         echo "<a href='index.php'>View Result</a>";
