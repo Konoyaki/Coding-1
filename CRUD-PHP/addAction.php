@@ -19,11 +19,11 @@ if (isset($_POST['submit'])) {
         if (empty($name)) {
             echo "<font color ='red'>Name field is empty.</font><br/>";
         }
-
+        
         if (empty($age)) {
             echo "<font color='red'>Age field is empty.</font><br/>";
         }
-
+        
         if (empty($email)) {
             echo "<font color='red'>Email field is empty.</font><br/>";
         }
